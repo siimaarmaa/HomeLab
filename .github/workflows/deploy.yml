@@ -37,4 +37,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./site/    # Laeb üles ainult ehitatud failid, mitte algkoodi
-        server-dir: ./htdocs/ # Zone peamine veebikaust (muuda vajadusel, nt ./domeenid/domeen.ee/htdocs/)
+        server-dir: . # Zone peamine veebikaust (muuda vajadusel, nt ./domeenid/domeen.ee/htdocs/)
