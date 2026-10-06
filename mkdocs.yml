@@ -1,1 +1,13 @@
+site_name: Minu Zone Testleht
+site_description: MkDocs dokumentatsiooni demo Zone serveri jaoks
 
+theme:
+  name: mkdocs
+
+nav:
+  - Avaleht: index.md
+  - Juhendid:
+    - Serveri Seadistus: seadistus.md
+
+plugins:
+  - search
