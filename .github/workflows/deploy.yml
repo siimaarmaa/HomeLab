@@ -31,7 +31,7 @@ jobs:
 
     # 5. Laadi ainult valmis 'site' kausta sisu Zone serverisse
     - name: Deploy to Zone via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
