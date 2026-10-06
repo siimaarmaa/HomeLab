@@ -1,0 +1,40 @@
+name: Ehita MkDocs ja laadi failid Zonesse
+
+on:
+  push:
+    branches:
+      - main  # Töövoog käivitub, kui lükkad muudatused 'main' harru
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Tõmba kood GitHubist virtuaalmasinasse
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # 2. Seadista Python
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-node-version: '3.x'
+
+    # 3. Paigalda MkDocs (ja vajadusel teemad)
+    - name: Install MkDocs
+      run: |
+        pip install mkdocs mkdocs-material
+
+    # 4. Ehita valmis staatiline veebileht (tekitab kausta 'site')
+    - name: Build static files
+      run: mkdocs build
+
+    # 5. Laadi ainult valmis 'site' kausta sisu Zone serverisse
+    - name: Deploy to Zone via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./site/    # Laeb üles ainult ehitatud failid, mitte algkoodi
+        server-dir: ./htdocs/ # Zone peamine veebikaust (muuda vajadusel, nt ./domeenid/domeen.ee/htdocs/)
