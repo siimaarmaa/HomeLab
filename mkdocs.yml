@@ -1,5 +1,5 @@
-site_name: Minu Zone Testleht
-site_description: MkDocs dokumentatsiooni demo Zone serveri jaoks
+site_name: Aarmaa IT - Docs
+site_description: Juhendid, Näpunäited, etc
 
 theme:
   name: mkdocs
