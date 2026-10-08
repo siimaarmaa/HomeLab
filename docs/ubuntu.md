@@ -2,7 +2,7 @@
 
 Siia. kogun väikseid terminali juppe kõigi Ubuntu versioonide osas millega kokku puutun.
 
-### Koodi kuvamise näide
+## Ubuntu 26.04 - TimeZone
 
 Kui soovid oma lehel näidata terminali käske või skripte, teeb MkDocs need automaatselt loetavaks:
 
@@ -10,7 +10,3 @@ Kui soovid oma lehel näidata terminali käske või skripte, teeb MkDocs need au
 # Nii saab kontrollida, kas failid jõudsid kohale
 ls -la /kataloog/tugi/htdocs/
 ```
-
-### Olulised lingid Zone testimiseks
-* [Zone Haldusliides](https://zone.ee)
-* [GitHub Actions töölaud](https://github.com) (vaata sealt, kas *Deploy* õnnestus)
