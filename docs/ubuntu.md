@@ -4,9 +4,12 @@ Siia. kogun väikseid terminali juppe kõigi Ubuntu versioonide osas millega kok
 
 ## Ubuntu 26.04 - TimeZone
 
-Kui soovid oma lehel näidata terminali käske või skripte, teeb MkDocs need automaatselt loetavaks:
+Lisa enda TimeZone
 
 ```bash
-# Nii saab kontrollida, kas failid jõudsid kohale
-ls -la /kataloog/tugi/htdocs/
+sudo timedatectl set-timezone Europe/Tallinn
+```
+Kontrolli
+```bash
+sudo timedatectl
 ```
