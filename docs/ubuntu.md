@@ -13,3 +13,4 @@ Kontrolli
 ```bash
 sudo timedatectl
 ```
+---
