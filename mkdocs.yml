@@ -8,6 +8,8 @@ nav:
   - Avaleht: index.md
   - Juhendid:
     - Serveri Seadistus: seadistus.md
+  - Näpunäited:
+    - Ubuntu 26.04: ubuntu.md
 
 plugins:
   - search
